@@ -13,6 +13,8 @@
 		FCC4A5FF27A5486A0037EE06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A5FD27A5486A0037EE06 /* Main.storyboard */; };
 		FCC4A60127A5486B0037EE06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A60027A5486B0037EE06 /* Assets.xcassets */; };
 		FCC4A60427A5486B0037EE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A60227A5486B0037EE06 /* LaunchScreen.storyboard */; };
+		FCC4A61327A55AA60037EE06 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A61227A55AA60037EE06 /* Song.swift */; };
+		FCC4A61527A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A61427A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FCC4A60027A5486B0037EE06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCC4A60327A5486B0037EE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCC4A60527A5486B0037EE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC4A61227A55AA60037EE06 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		FCC4A61427A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scott Buckley - Life In Silico.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		FCC4A5F627A5486A0037EE06 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				FCC4A5F727A5486A0037EE06 /* AppDelegate.swift */,
-				FCC4A5F927A5486A0037EE06 /* SceneDelegate.swift */,
-				FCC4A5FB27A5486A0037EE06 /* ViewController.swift */,
-				FCC4A5FD27A5486A0037EE06 /* Main.storyboard */,
-				FCC4A60027A5486B0037EE06 /* Assets.xcassets */,
-				FCC4A60227A5486B0037EE06 /* LaunchScreen.storyboard */,
-				FCC4A60527A5486B0037EE06 /* Info.plist */,
+				FCC4A61127A55A900037EE06 /* Models */,
+				FCC4A60B27A5487E0037EE06 /* SupportingFiles */,
+				FCC4A60E27A548B20037EE06 /* ViewControllers */,
+				FCC4A60D27A548A10037EE06 /* Storyboards */,
+				FCC4A60C27A548950037EE06 /* Resources */,
 			);
 			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		FCC4A60B27A5487E0037EE06 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4A5F727A5486A0037EE06 /* AppDelegate.swift */,
+				FCC4A5F927A5486A0037EE06 /* SceneDelegate.swift */,
+				FCC4A60527A5486B0037EE06 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FCC4A60C27A548950037EE06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4A60027A5486B0037EE06 /* Assets.xcassets */,
+				FCC4A61427A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FCC4A60D27A548A10037EE06 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4A5FD27A5486A0037EE06 /* Main.storyboard */,
+				FCC4A60227A5486B0037EE06 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FCC4A60E27A548B20037EE06 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4A5FB27A5486A0037EE06 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCC4A61127A55A900037EE06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4A61227A55AA60037EE06 /* Song.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +174,7 @@
 				FCC4A60427A5486B0037EE06 /* LaunchScreen.storyboard in Resources */,
 				FCC4A60127A5486B0037EE06 /* Assets.xcassets in Resources */,
 				FCC4A5FF27A5486A0037EE06 /* Main.storyboard in Resources */,
+				FCC4A61527A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC4A61327A55AA60037EE06 /* Song.swift in Sources */,
 				FCC4A5FC27A5486A0037EE06 /* ViewController.swift in Sources */,
 				FCC4A5F827A5486A0037EE06 /* AppDelegate.swift in Sources */,
 				FCC4A5FA27A5486A0037EE06 /* SceneDelegate.swift in Sources */,
@@ -291,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4ARG8W2BQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AudioPlayer/Info.plist;
+				INFOPLIST_FILE = AudioPlayer/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4ARG8W2BQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AudioPlayer/Info.plist;
+				INFOPLIST_FILE = AudioPlayer/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

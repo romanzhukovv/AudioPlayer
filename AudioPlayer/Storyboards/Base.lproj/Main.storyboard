@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OTm-R8-BbE">
+                                <rect key="frame" x="20" y="20" width="280" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OTm-R8-BbE" secondAttribute="height" multiplier="1:1" id="QQ5-t9-u7J"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haJ-pu-kgd">
+                                <rect key="frame" x="130" y="394" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="haJ-pu-kgd" secondAttribute="height" multiplier="1:1" id="QZU-Vl-Mio"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="hMQ-Ch-H5J"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="caF-wj-3hR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obQ-6D-vqg">
+                                <rect key="frame" x="20" y="335" width="280" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OTm-R8-BbE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.875" id="6hB-Uj-gQW"/>
+                            <constraint firstItem="haJ-pu-kgd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IvE-bE-lmf"/>
+                            <constraint firstItem="OTm-R8-BbE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KWX-x0-vTv"/>
+                            <constraint firstItem="obQ-6D-vqg" firstAttribute="width" secondItem="OTm-R8-BbE" secondAttribute="width" id="f2U-kc-OJv"/>
+                            <constraint firstItem="haJ-pu-kgd" firstAttribute="top" secondItem="obQ-6D-vqg" secondAttribute="bottom" constant="35" id="hrv-xq-SPD"/>
+                            <constraint firstItem="obQ-6D-vqg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rnn-et-bxl"/>
+                            <constraint firstItem="obQ-6D-vqg" firstAttribute="top" secondItem="OTm-R8-BbE" secondAttribute="bottom" constant="35" id="xfs-6R-dtp"/>
+                            <constraint firstItem="OTm-R8-BbE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yca-OU-a1w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="haJ-pu-kgd" id="Bg4-uM-6ws"/>
+                        <outlet property="songImage" destination="OTm-R8-BbE" id="JDM-ox-ENS"/>
+                        <outlet property="songTitleLabel" destination="obQ-6D-vqg" id="iDi-IP-9va"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="83.450704225352112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
