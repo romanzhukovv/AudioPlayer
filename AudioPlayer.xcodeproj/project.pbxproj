@@ -15,6 +15,7 @@
 		FCC4A60427A5486B0037EE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A60227A5486B0037EE06 /* LaunchScreen.storyboard */; };
 		FCC4A61327A55AA60037EE06 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A61227A55AA60037EE06 /* Song.swift */; };
 		FCC4A61527A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A61427A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 */; };
+		FCC4A61727A570F90037EE06 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A61627A570F90037EE06 /* AudioManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCC4A60527A5486B0037EE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC4A61227A55AA60037EE06 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		FCC4A61427A56D2A0037EE06 /* Scott Buckley - Life In Silico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scott Buckley - Life In Silico.mp3"; sourceTree = "<group>"; };
+		FCC4A61627A570F90037EE06 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FCC4A60E27A548B20037EE06 /* ViewControllers */,
 				FCC4A60D27A548A10037EE06 /* Storyboards */,
 				FCC4A60C27A548950037EE06 /* Resources */,
+				FCC4A61827A570FD0037EE06 /* Services */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -111,6 +114,14 @@
 				FCC4A61227A55AA60037EE06 /* Song.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FCC4A61827A570FD0037EE06 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCC4A61627A570F90037EE06 /* AudioManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				FCC4A61327A55AA60037EE06 /* Song.swift in Sources */,
 				FCC4A5FC27A5486A0037EE06 /* ViewController.swift in Sources */,
 				FCC4A5F827A5486A0037EE06 /* AppDelegate.swift in Sources */,
+				FCC4A61727A570F90037EE06 /* AudioManager.swift in Sources */,
 				FCC4A5FA27A5486A0037EE06 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
