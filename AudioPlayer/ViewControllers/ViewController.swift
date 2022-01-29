@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         if isPlaying == false {
             playSong()
         } else if isPlaying == true {
-           pauseSong()
+            pauseSong()
         }
     }
 }
@@ -48,7 +48,7 @@ extension ViewController {
         audioPlayer.getPlayer(at: url)
         
         currentTimeLink.add(to: .main, forMode: .common)
-        durationLabel.text = "\(Float(audioPlayer.player?.duration ?? 0))"
+        durationLabel.text = "\(Int(audioPlayer.player?.duration ?? 0))"
     }
     
     private func playSong() {
@@ -71,7 +71,7 @@ extension ViewController {
     }
     
     @objc private func updateCurrentTime() {
-        let time = Float(audioPlayer.player?.currentTime ?? 0)
+        let time = Int(audioPlayer.player?.currentTime ?? 0)
         currentTimeLabel.text = "\(time)"
     }
 }
