@@ -14,9 +14,7 @@ class RecorderViewController: UIViewController, AVAudioRecorderDelegate {
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer!
-    
     var numberOfRecords = 0
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +31,7 @@ class RecorderViewController: UIViewController, AVAudioRecorderDelegate {
             numberOfRecords = number as! Int
         }
     }
+    
     @IBAction func recordButtonAction() {
         if audioRecorder == nil {
             numberOfRecords += 1
@@ -47,7 +46,7 @@ class RecorderViewController: UIViewController, AVAudioRecorderDelegate {
                 audioRecorder = try AVAudioRecorder(url: fileName, settings: settings)
                 audioRecorder.delegate = self
                 audioRecorder.record()
-                recordButton.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+                recordButton.layer.cornerRadius = 15
             } catch {
                 displayAlert(title: "Error", message: "Recording failed")
             }
@@ -57,7 +56,7 @@ class RecorderViewController: UIViewController, AVAudioRecorderDelegate {
             
             UserDefaults.standard.set(numberOfRecords, forKey: "myNumber")
             recordingTableView.reloadData()
-            recordButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            recordButton.layer.cornerRadius = recordButton.frame.width/2
         }
     }
     
@@ -73,11 +72,19 @@ extension RecorderViewController {
     private func setupUI() {
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         navigationController?.navigationBar.backgroundColor = UIColor(displayP3Red: 229/255, green: 57/255, blue: 53/255, alpha: 1)
-        
+        if #available(iOS 13, *)
+             {
+                 let statusBar = UIView(frame: (UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame)!)
+                 statusBar.backgroundColor = UIColor(displayP3Red: 229/255, green: 57/255, blue: 53/255, alpha: 1)
+                 UIApplication.shared.keyWindow?.addSubview(statusBar)
+             } else {
+                let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+                if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+                   statusBar.backgroundColor = UIColor(displayP3Red: 229/255, green: 57/255, blue: 53/255, alpha: 1)
+                }
+             }
         recordButton.layer.cornerRadius = recordButton.frame.width/2
     }
-    
-    
     
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -86,7 +93,7 @@ extension RecorderViewController {
     }
 }
 
-extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
+extension RecorderViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         numberOfRecords
     }
@@ -95,8 +102,7 @@ extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = "Новая запись \(indexPath.row)"
-        content.secondaryText = "\(Date().formatted(date: .long, time: .shortened))"
-        
+        content.secondaryText = "\(Date().formatted(date: .abbreviated, time: .shortened))"
         cell.contentConfiguration = content
         return cell
     }
@@ -112,4 +118,5 @@ extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+
 
