@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FCC4A5F827A5486A0037EE06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A5F727A5486A0037EE06 /* AppDelegate.swift */; };
 		FCC4A5FA27A5486A0037EE06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A5F927A5486A0037EE06 /* SceneDelegate.swift */; };
-		FCC4A5FC27A5486A0037EE06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A5FB27A5486A0037EE06 /* ViewController.swift */; };
+		FCC4A5FC27A5486A0037EE06 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4A5FB27A5486A0037EE06 /* RecorderViewController.swift */; };
 		FCC4A5FF27A5486A0037EE06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A5FD27A5486A0037EE06 /* Main.storyboard */; };
 		FCC4A60127A5486B0037EE06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A60027A5486B0037EE06 /* Assets.xcassets */; };
 		FCC4A60427A5486B0037EE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC4A60227A5486B0037EE06 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		FCC4A5F427A5486A0037EE06 /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC4A5F727A5486A0037EE06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC4A5F927A5486A0037EE06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCC4A5FB27A5486A0037EE06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCC4A5FB27A5486A0037EE06 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		FCC4A5FE27A5486A0037EE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCC4A60027A5486B0037EE06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCC4A60327A5486B0037EE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		FCC4A60E27A548B20037EE06 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCC4A5FB27A5486A0037EE06 /* ViewController.swift */,
+				FCC4A5FB27A5486A0037EE06 /* RecorderViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC4A61327A55AA60037EE06 /* Song.swift in Sources */,
-				FCC4A5FC27A5486A0037EE06 /* ViewController.swift in Sources */,
+				FCC4A5FC27A5486A0037EE06 /* RecorderViewController.swift in Sources */,
 				FCC4A5F827A5486A0037EE06 /* AppDelegate.swift in Sources */,
 				FCC4A61727A570F90037EE06 /* AudioManager.swift in Sources */,
 				FCC4A5FA27A5486A0037EE06 /* SceneDelegate.swift in Sources */,
