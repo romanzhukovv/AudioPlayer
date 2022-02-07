@@ -14,6 +14,6 @@ struct Song {
     }
     
     static func getSong() -> Song {
-        Song(name: "Life In Silico", artist: "Scott Buckley")
+        Song(name: "Life In Silico", artist: "Scott Buckle")
     }
 }
