@@ -15,6 +15,9 @@ class RecorderViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     var audioPlayer: AVAudioPlayer!
     var numberOfRecords = 0
+    
+    var selectedIndex: Int = 0
+    var isExpandRow = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +112,17 @@ extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        recordingTableView.deselectRow(at: indexPath, animated: true)
+    
+        if selectedIndex == indexPath.row {
+            isExpandRow.toggle()
+        } else {
+            isExpandRow = true
+        }
+        selectedIndex = indexPath.row
+        
+        recordingTableView.reloadRows(at: [indexPath], with: .automatic)
+        
         let path = getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
                 
                 do {
@@ -117,6 +131,14 @@ extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
                 } catch {
                     print("Error")
                 }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedIndex == indexPath.row && isExpandRow == true {
+            return 200
+        } else {
+            return 70
+        }
     }
 }
 
