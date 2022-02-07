@@ -53,7 +53,6 @@ class RecorderViewController: UIViewController, AVAudioRecorderDelegate {
         } else {
             audioRecorder.stop()
             audioRecorder = nil
-            
             UserDefaults.standard.set(numberOfRecords, forKey: "myNumber")
             recordingTableView.reloadData()
             recordButton.layer.cornerRadius = recordButton.frame.width/2
@@ -72,6 +71,7 @@ extension RecorderViewController {
     private func setupUI() {
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         navigationController?.navigationBar.backgroundColor = UIColor(displayP3Red: 229/255, green: 57/255, blue: 53/255, alpha: 1)
+        
         if #available(iOS 13, *)
              {
                  let statusBar = UIView(frame: (UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame)!)
@@ -83,6 +83,7 @@ extension RecorderViewController {
                    statusBar.backgroundColor = UIColor(displayP3Red: 229/255, green: 57/255, blue: 53/255, alpha: 1)
                 }
              }
+        
         recordButton.layer.cornerRadius = recordButton.frame.width/2
     }
     
