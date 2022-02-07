@@ -129,7 +129,7 @@ extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
                     audioPlayer = try AVAudioPlayer(contentsOf: path)
                     audioPlayer.play()
                 } catch {
-                    print("Error")
+                    print("Errorr")
                 }
     }
     
