@@ -94,7 +94,7 @@ extension RecorderViewController {
     }
 }
 
-extension RecorderViewController: UITableViewDataSource {
+extension RecorderViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         numberOfRecords
     }
@@ -110,13 +110,13 @@ extension RecorderViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let path = getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: path)
-            audioPlayer.play()
-        } catch {
-            print("Error")
-        }
+                
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: path)
+                    audioPlayer.play()
+                } catch {
+                    print("Error")
+                }
     }
 }
 
